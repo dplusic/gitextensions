@@ -19,7 +19,7 @@
             this.SpellCheckContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.SpellCheckTimer = new System.Windows.Forms.Timer(this.components);
-            this.TextBox = new System.Windows.Forms.RichTextBox();
+            this.TextBox = new RichTextBoxImeControl.RichTextBoxIme();
             this.AutoComplete = new System.Windows.Forms.ListBox();
             this.AutoCompleteTimer = new System.Windows.Forms.Timer(this.components);
             this.AutoCompleteToolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -106,7 +106,7 @@
         private System.Windows.Forms.ContextMenuStrip SpellCheckContextMenu;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Timer SpellCheckTimer;
-        private System.Windows.Forms.RichTextBox TextBox;
+        private RichTextBoxImeControl.RichTextBoxIme TextBox;
         private System.Windows.Forms.ListBox AutoComplete;
         private System.Windows.Forms.Timer AutoCompleteTimer;
         private System.Windows.Forms.ToolTip AutoCompleteToolTip;
