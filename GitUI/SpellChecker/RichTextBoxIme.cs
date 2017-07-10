@@ -123,7 +123,23 @@ namespace RichTextBoxImeControl
 
         #endregion
 
-        #region Properties
+        #region Text Property
+
+        private string text = null;
+
+        protected override void OnTextChanged(EventArgs e)
+        {
+            text = null;
+
+            base.OnTextChanged(e);
+        }
+
+        protected override void OnSelectionChanged(EventArgs e)
+        {
+            text = null;
+
+            base.OnSelectionChanged(e);
+        }
 
         /// <summary>
         /// RichTextBoxIme의 현재 텍스트를 가져오거나 설정합니다.
@@ -134,6 +150,11 @@ namespace RichTextBoxImeControl
 
             get
             {
+                if (text != null)
+                {
+                    return text;
+                }
+
                 string thisText = string.Empty;
                 #region  RichText 가져오기
                 // 참조 : Paul Welter's Weblog
@@ -264,7 +285,9 @@ namespace RichTextBoxImeControl
                 else
                     _ImeSaveString = string.Empty;
 
-                return rtn;
+                text = rtn;
+
+                return text;
             }
         }
 
